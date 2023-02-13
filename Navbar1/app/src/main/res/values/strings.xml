@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Navbar1</string>
+    <string name="home_text">Home</string>
+    <string name="like_text">Like</string>
+    <string name="search_text">Search</string>
+    <string name="user_text">User</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

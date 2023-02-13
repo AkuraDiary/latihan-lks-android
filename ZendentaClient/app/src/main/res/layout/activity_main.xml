@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/customHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:elevation="20dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <!--            <androidx.appcompat.widget.AppCompatImageView-->
+            <!--                android:id="@+id/imgUser"-->
+            <!--                android:layout_width="50dp"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:padding="4dp"-->
+            <!--                android:src="@drawable/zendenta_logo" />-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins_semibold"
+                android:padding="4dp"
+                android:text="Welcome"
+                android:textColor="@color/blue_200"
+                android:textSize="16sp" />
+
+            <TextView
+
+                android:id="@+id/tvNamaUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins_semibold"
+                android:padding="4dp"
+                android:text="Hello World!"
+                android:textColor="@color/blue_200"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <FrameLayout
+        android:id="@+id/bodyFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blue_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/customHeader">
+
+        <ImageButton
+            android:src="@drawable/ic_logout"
+            android:id="@+id/btnLogout"
+            android:padding="8dp"
+            android:backgroundTint="@color/Transparent"
+            android:layout_gravity="end"
+            android:layout_margin="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/homeFragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:backgroundTint="@color/black"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/mainHeaderImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/header_img" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardContainer"
+            style="@style/Widget.Material3.CardView.Elevated"
+            android:layout_width="match_parent"
+            android:layout_height="325dp"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="8dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingVertical="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="4dp"
+                    android:text="Next Appointment"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/tvNextApDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:fontFamily="@font/poppins_bold"
+                    android:paddingHorizontal="16dp"
+                    android:text=" "
+                    android:textSize="12sp" />
+
+                <include
+                    android:id="@+id/cardAppointmentNext"
+                    layout="@layout/appointment_home_layout" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSeeAllAppointment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="18dp"
+                    app:tint="@color/blue_5500"
+                    android:backgroundTint="@color/blue_5500"
+                    android:text="See All"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:cornerRadius="15dp" />
+
+                <FrameLayout
+                    android:id="@+id/customBottomNavContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_gravity="bottom">
+
+                    <FrameLayout
+                        android:id="@+id/customBottomNav"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="-4dp"
+                        android:elevation="10dp"
+                        android:outlineProvider="bounds">
+
+
+                        <LinearLayout
+                            android:id="@+id/customBottomNavContents"
+                            android:layout_width="match_parent"
+                            android:layout_height="58dp"
+                            android:layout_gravity="bottom"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <!-- put content here-->
+
+
+                            <ImageView
+                                android:id="@+id/btnNavHome"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="8dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/ic_home"
+                                app:tint="@color/blue_5500" />
+
+                            <ImageView
+                                android:id="@+id/btnNavCalendar"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="8dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/ic_calendar"
+                                app:tint="@color/blue_5500" />
+
+                            <!--                        empty component-->
+                            <ImageView
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="8dp"
+                                android:layout_weight="2"
+                                app:tint="@color/blue_200" />
+                            <!--                        empty component-->
+
+                            <ImageView
+                                android:id="@+id/btnNavChat"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="8dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/ic_chat"
+                                app:tint="@color/blue_5500" />
+
+                            <ImageView
+                                android:id="@+id/btnNavProfile"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="8dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/ic_profile"
+                                app:tint="@color/blue_5500" />
+                        </LinearLayout>
+                    </FrameLayout>
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabAddAppointment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:layout_margin="16dp"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:background="@color/blue_5500"
+                android:backgroundTint="@color/blue_5500"
+                android:src="@drawable/ic_add_24"
+                android:tint="@color/white" />
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

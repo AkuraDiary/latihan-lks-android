@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dufan" />
+
+    <TextView
+        android:id="@+id/item_nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Dufan"
+        android:textColor="#3d3d3d"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/item_waktu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:text="30 min"
+        android:textColor="#3d3d3d"
+        app:layout_constraintBottom_toBottomOf="@+id/item_nama"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/item_nama" />
+
+    <RatingBar
+        android:id="@+id/item_rating"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/item_nama"
+        app:layout_constraintTop_toBottomOf="@+id/item_nama" />
+
+    <TextView
+        android:id="@+id/item_harga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="Rp. 10000"
+        android:textColor="#3d3d3d"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/item_rating"
+        app:layout_constraintTop_toBottomOf="@+id/item_rating" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:text="1"
+        app:layout_constraintBottom_toBottomOf="@+id/item_harga"
+        app:layout_constraintEnd_toEndOf="@+id/item_waktu"
+        app:layout_constraintTop_toBottomOf="@+id/item_waktu" />
+</androidx.constraintlayout.widget.ConstraintLayout>

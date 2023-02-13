@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="6dp"
+    tools:context=".pendaftaran.fragments.PilihDokterFragment">
+
+    <TextView
+        android:id="@+id/tvSelectedDoktere"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="4dp"
+        android:text="Selected Treatment"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/selectedDokterDataContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:background="@color/blue_200"
+        android:paddingVertical="2dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSelectedDoktere">
+
+        <LinearLayout
+
+            android:id="@+id/selectedDokterData"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/blue_200"
+            android:orientation="horizontal"
+            android:paddingVertical="16dp">
+
+            <!--            <androidx.appcompat.widget.AppCompatImageView-->
+            <!--                android:layout_width="60dp"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:layout_gravity="start"-->
+            <!--                android:scaleType="fitCenter"-->
+            <!--                android:src="@drawable/user"-->
+            <!--                android:tint="@color/blue_200" />-->
+
+
+            <TextView
+                android:id="@+id/tvNamaTreatment"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="16dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text=""
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_weight="2"
+                android:id="@+id/tvHargaTreatment"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="16dp"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:fontFamily="@font/poppins_bold"
+                android:text=""
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvFeeDokter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="16dp"
+            android:gravity="end"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvPilihDokter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
+        android:fontFamily="@font/poppins_bold"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="4dp"
+        android:text="Pilih Treatment"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintTop_toBottomOf="@+id/selectedDokterDataContainer" />
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginBottom="30dp"
+        android:paddingVertical="6dp"
+        android:paddingHorizontal="8dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPilihDokter"
+        tools:listitem="@layout/list_treatment_layout">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDaftarDokter"
+            android:layout_width="match_parent"
+            android:layout_margin="6dp"
+            android:layout_height="match_parent"
+            android:elevation="10dp"
+            tools:listitem="@layout/list_treatment_layout" />
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

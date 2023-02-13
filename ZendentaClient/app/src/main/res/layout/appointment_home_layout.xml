@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:paddingVertical="4dp"
+    android:layout_height="95dp"
+
+    android:layout_marginVertical="18dp">
+
+    <androidx.cardview.widget.CardView
+        android:paddingVertical="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:background="@color/white"
+        android:layout_marginHorizontal="16dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+
+            android:paddingVertical="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="start"
+                android:scaleType="fitCenter"
+
+                android:src="@drawable/zendenta_logo" />
+
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvNamaDokter"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvCaseName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text=""
+
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+<!--        <ImageButton-->
+
+<!--            android:background="@drawable/icon_info"-->
+<!--            android:layout_margin="16dp"-->
+<!--            android:gravity="end"-->
+<!--            android:layout_gravity="end"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"/>-->
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

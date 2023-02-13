@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_margin="6dp"
+    app:cardElevation="10dp"
+    android:background="@color/darkgrey"
+    android:backgroundTint="@color/qatarred"
+    app:cardCornerRadius="10dp">
+
+    <FrameLayout
+        android:id="@+id/layoutItemHasilFrameContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--        HEADER-->
+        <ImageView
+            android:id="@+id/itemHasilHeaderImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/thumbnail"
+            android:tint="#43120707"
+            tools:ignore="UseAppTint" />
+        <!--        HEADER-->
+
+        <!--        DATA-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="bottom|center"
+                android:background="@color/transparent">
+
+                <!--            TEXT VS-->
+                <!--            TEXT VS-->
+
+
+                <!--            <TextView-->
+                <!--                android:id="@+id/tvVs"-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:fontFamily="@font/poppins_bold"-->
+                <!--                android:text="VS"-->
+                <!--                android:textAlignment="center"-->
+                <!--                android:textColor="@color/white"-->
+                <!--                android:textSize="32dp"-->
+                <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                app:layout_constraintEnd_toStartOf="@+id/containerCardDua"-->
+                <!--                app:layout_constraintHorizontal_bias="0.496"-->
+                <!--                app:layout_constraintStart_toEndOf="@+id/containerCardSatu" />-->
+
+                <!--            TXT NAMA LIGA-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/namaTanggalContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/qatarred"
+                    android:backgroundTint="@color/qatarred"
+                    android:paddingVertical="6dp"
+                    android:paddingStart="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tvNamaLiga"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:maxLines="2"
+                        android:text="Qualification Round"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <!--            TXT NAMA LIGA-->
+
+                    <!--            TANGGAL MAIN-->
+                    <TextView
+                        android:id="@+id/tvTanggalMain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+
+                        android:text="21 December 2022"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvNamaLiga" />
+                    <!--            TANGGAL MAIN-->
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--            DATA TIM SATU-->
+                <LinearLayout
+                    android:id="@+id/containerCardSatu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="start|center"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintStart_toEndOf="@id/namaTanggalContainer"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewTimSatu"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="12dp">
+
+                        <ImageView
+                            android:id="@+id/imgViewTimSatu"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/indo_flag" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/tvNamaTimSatu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Indonesia"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/qatarred"
+                         />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvSkorTimSatu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:padding="4dp"
+                    android:text="01"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/qatarred"
+                    android:textSize="14dp"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--            DATA TIM SATU-->
+
+                <!--            DATA TIM DUA-->
+                <LinearLayout
+                    android:id="@+id/containerCardDua"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="start|center"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintStart_toEndOf="@id/namaTanggalContainer"
+                    app:layout_constraintTop_toBottomOf="@+id/containerCardSatu">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewTimDua"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="12dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/imgViewTimDua"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/korea_flag" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/tvNamaTimDua"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="south Korea"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/qatarred" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvSkorTimDua"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="02"
+                    android:layout_marginEnd="8dp"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/qatarred"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSkorTimSatu" />
+                <!--            DATA TIM KANAN-->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+        <!--        DATA-->
+    </FrameLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

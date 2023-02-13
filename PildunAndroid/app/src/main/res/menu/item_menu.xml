@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_jadwal"
+        android:title="Jadwal"
+        android:icon="@drawable/ic_jadwal"/>
+    <item android:id="@+id/nav_hasil"
+        android:title="Hasil"
+        android:icon="@drawable/ic_hasil"/>
+</menu>
